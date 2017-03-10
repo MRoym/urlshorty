@@ -3,7 +3,7 @@ var mongo = require("mongodb");
 var mongoose = require("mongoose");
 var port = process.env.PORT || 3000;
 var app = express();
-var mongo_url = "mongodb://localhost:27017/data" //process.env.MONGOLAB_URI;
+var mongo_url = process.env.MONGOLAB_URI; //"mongodb://localhost:27017/data" //process.env.MONGOLAB_URI;
 
 var urlSchema = new mongoose.Schema({long_url: String,
                                     extension: String});
