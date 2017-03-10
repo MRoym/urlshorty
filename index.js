@@ -17,7 +17,7 @@ app.get("/", function(request, response){
 
 app.get("/url/*", function(request, response){
 
-  var output = {long_url: null, extension:nullh};
+  var output = {long_url: null, extension:null};
 
   mongoose.connect(mongo_url, function(err, result){
     if (err){
