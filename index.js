@@ -3,7 +3,7 @@ var mongo = require("mongodb");
 var mongoose = require("mongoose");
 var port = process.env.PORT || 3000;
 var app = express();
-var mongo_url = "mongodb://MRoyM:Kalahari1@ds151078.mlab.com:51078/urls" //process.env.MONGOLAB_URI; //"mongodb://localhost:27017/data" //process.env.MONGOLAB_URI;
+var mongo_url = process.env.MONGO_URI;
 
 var urlSchema = new mongoose.Schema({long_url: String,
                                     extension: String});
@@ -12,12 +12,12 @@ var urlModel = mongoose.model("urls", urlSchema);
 
 
 app.get("/", function(request, response){
-  response.send("Home page!");
+  response.send("Home page! Go to /url/[our url] to get a shortened url.");
 })
 
 app.get("/url/*", function(request, response){
 
-  var output = {long_url: null, extension:null};
+  var output = {long_url: null, extension:nullh};
 
   mongoose.connect(mongo_url, function(err, result){
     if (err){
