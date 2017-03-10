@@ -12,6 +12,10 @@ var urlSchema = new mongoose.Schema({long_url: String,
 var urlModel = mongoose.model("URL Model", urlSchema);
 
 
+app.get("/", function(request, response){
+  response.send("Home page!");
+})
+
 app.get("/url/:url", function(request, response){
 
   response.send(request.params.url);
