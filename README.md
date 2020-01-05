@@ -1,2 +1,1 @@
-A URL Shortener microservice made with node JS and hosted on Heroku
-A simple URL shortener made with Node and MongoDB hosted on Heroku
+A simple URL shortener microservice made with NodeJS, MongoDB and hosted on Heroku
